@@ -2,22 +2,14 @@
 <html lang="en" ng-app="userApp">
   <head>
     <meta charset="utf-8">
-    <title>My HTML File</title>
+    <title>UserList</title>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.11/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script src="user-list.component.js"></script>
   </head>
   <body ng-controller="UserListController">
 
-  <ul>
-    <li ng-repeat="user in users">
-      <span>{{user.isid}}</span>
-      <span>{{user.givenname}}</span>
-      <span>{{user.familyname}}</span>
-      <span>{{user.password}}</span>
-      <span>{{user.username}}</span>
-      <span>{{user.email}}</span>
-    </li>
-  </ul>
+  <user-list></user-list>
 
   </body>
 </html>
