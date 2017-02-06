@@ -1,10 +1,20 @@
-<ul>
-  <li ng-repeat="user in $ctrl.users">
-    <span>{{user.isid}}</span>
-    <span>{{user.givenname}}</span>
-    <span>{{user.familyname}}</span>
-    <span>{{user.password}}</span>
-    <span>{{user.username}}</span>
-    <span>{{user.email}}</span>
-  </li>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      Search: <input ng-model="$ctrl.query" />
+
+    </div>
+      <div class="col-md-10">
+        <ul class="phones">
+          <li ng-repeat="user in $ctrl.users | filter:$ctrl.query">
+            <span>{{user.isid}}</span>
+            <span>{{user.givenname}}</span>
+            <span>{{user.familyname}}</span>
+            <span>{{user.password}}</span>
+            <span>{{user.username}}</span>
+            <span>{{user.email}}</span>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
